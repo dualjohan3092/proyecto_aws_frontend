@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Hola Mundo</title>
+</head>
+<body>
+  <h1>¡Hola Mundo desde el frontend!</h1>
+  <p id="message"></p>
+  <script src="script.js"></script>
+  <script>
+    fetch(window.backendUrl)
+      .then(response => response.text())
+      .then(message => document.getElementById('message').innerText = message)
+      .catch(error => console.error('Error al obtener el mensaje desde el backend:', error));
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Hola Mundo</title>
+</head>
+<body>
+  <h1>¡Hola Mundo desde el frontend!</h1>
+  <p id="message"></p>
+  <script>
+      const backendUrl = 'http://backend:3000/api';
+      console.log('backendUrl:', backendUrl);
+    fetch(backendUrl)
+      .then(response => response.text())
+      .then(message => document.getElementById('message').innerText = message)
+      .catch(error => console.error('Error al obtener el mensaje desde el backend:', error));
+  </script>
+</body>
+</html>
+-->
